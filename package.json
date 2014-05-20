@@ -1,0 +1,28 @@
+{
+  "name": "turf-min",
+  "version": "0.0.1",
+  "description": "turf min module",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morganherlocker/turf-min.git"
+  },
+  "keywords": [
+    "turf",
+    "min",
+    "stats",
+    "geojson"
+  ],
+  "author": "morganherlocker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morganherlocker/turf-min/issues"
+  },
+  "homepage": "https://github.com/morganherlocker/turf-min",
+  "devDependencies": {
+    "tape": "^2.13.1"
+  }
+}
