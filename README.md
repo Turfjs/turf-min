@@ -4,6 +4,29 @@ turf-min
 
 Calculates the min value of a field for points within a set of polygons.
 
+###Install
+
+```sh
+npm install turf-min
+```
+
+###Parameters
+
+|name|description|
+|---|---|
+|polys|featurecollection of polygons|
+|points|featurecollection of points|
+|inField|field to map|
+|outField|new field|
+
+###Usage
+
+```js
+min(polyFC, ptFC, inField, outField)
+```
+
+###Example
+
 ```js
 var min = require('turf-min')
 var point = require('turf-point')
