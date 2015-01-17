@@ -13,18 +13,35 @@ var inside = require('turf-inside');
 * with properties listed as `outField` values
 * @example
 * var polygons = turf.featurecollection([
-*   turf.polygon([[[0,0],[10,0],[10,10],[0,10],[0,0]]]),
-*   turf.polygon([[[10,0],[20,10],[20,20], [20,0]]])]);
+*   turf.polygon([[
+*     [72.809658, 18.961818],
+*     [72.809658, 18.974805],
+*     [72.827167, 18.974805],
+*     [72.827167, 18.961818],
+*     [72.809658, 18.961818]
+*   ]]),
+*   turf.polygon([[
+*     [72.820987, 18.947043],
+*     [72.820987, 18.95922],
+*     [72.841243, 18.95922],
+*     [72.841243, 18.947043],
+*     [72.820987, 18.947043]
+*   ]])
+* ]);
 * var points = turf.featurecollection([
-*   turf.point(5,5, {population: 200}),
-*   turf.point(1,3, {population: 600}),
-*   turf.point(14,2, {population: 100}),
-*   turf.point(13,1, {population: 200}),
-*   turf.point(19,7, {population: 300})]);
-* var aggregated = turf.min(polygons, points, 'population', 'min');
-* //=polygons
-* //=points
-* //=aggregated
+*   turf.point(72.814464, 18.971396, {population: 200}),
+*   turf.point(72.820043, 18.969772, {population: 600}),
+*   turf.point(72.817296, 18.964253, {population: 100}),
+*   turf.point(72.83575, 18.954837, {population: 200}),
+*   turf.point(72.828197, 18.95094, {population: 300})]);
+*
+* var minimums = turf.min(
+*   polygons, points, 'population', 'min');
+*
+* var result = turf.featurecollection(
+*   points.features.concat(minimums.features));
+*
+* //=result
 */
 module.exports = function(polyFC, ptFC, inField, outField){
   polyFC.features.forEach(function(poly){
