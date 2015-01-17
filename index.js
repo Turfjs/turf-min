@@ -2,8 +2,7 @@ var ss = require('simple-statistics');
 var inside = require('turf-inside');
 
 /**
-* Takes a set of polygons, a set of points, and tag polygons with the sum
-* of point property values contained within.
+* Calculates the minimum value of a field for {@link Point} features within a set of {@link Polygon} features.
 *
 * @module turf/min
 * @param {FeatureCollection} polygons a FeatureCollection of {@link Polygon} features
