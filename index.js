@@ -1,4 +1,3 @@
-var ss = require('simple-statistics');
 var inside = require('turf-inside');
 
 /**
@@ -54,8 +53,18 @@ module.exports = function(polyFC, ptFC, inField, outField){
         values.push(pt.properties[inField]);
       }
     });
-    poly.properties[outField] = ss.min(values);
+    poly.properties[outField] = min(values);
   });
 
   return polyFC;
 };
+
+function min(x) {
+    var value;
+    for (var i = 0; i < x.length; i++) {
+        // On the first iteration of this loop, min is
+        // undefined and is thus made the minimum element in the array
+        if (x[i] < value || value === undefined) value = x[i];
+    }
+    return value;
+}
