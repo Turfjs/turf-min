@@ -9,7 +9,7 @@ var inside = require('turf-inside');
 * @param {FeatureCollection<Point>} points input points
 * @param {String} inField the field in input data to analyze
 * @param {String} outField the field in which to store results
-* @return {FeatureCollection<Polygon} polygons
+* @return {FeatureCollection<Polygon>} polygons
 * with properties listed as `outField` values
 * @example
 * var polygons = {
