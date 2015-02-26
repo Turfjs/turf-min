@@ -1,7 +1,7 @@
 var inside = require('turf-inside');
 
 /**
-* Calculates the minimum value of a field for points within a set of polygons.
+* Calculates the minimum value of a field for a set of {@link Point|points} within a set of {@link Polygon|polygons}.
 *
 * @module turf/min
 * @category aggregation
